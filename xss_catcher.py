@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Importa CORS
 
 app = Flask(__name__)
+CORS(app)  # Abilita CORS per tutte le origini
 
 @app.route('/receive_cookies', methods=['POST'])
 def receive_cookies():
